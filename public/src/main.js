@@ -1,8 +1,11 @@
 import React from "react";
-import { render } from "react-dom";
-import App from "./components/App";
+import {render} from "react-dom";
+import {Router, Route, hashHistory} from 'react-router';
+import Item from './components/Item';
 
 render(
-  <App/>,
+  <Router history={hashHistory}>
+    <Route path="/item" component={Item}/>
+  </Router>,
   document.getElementById("app")
 );
